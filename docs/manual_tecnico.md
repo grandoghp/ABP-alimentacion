@@ -4,162 +4,154 @@
 1. [Introducción](#introducción)
 2. [Arquitectura del Sistema](#arquitectura-del-sistema)
 3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-4. [Estructura de Archivos](#estructura-de-archivos)
+4. [Estructura del Proyecto](#estructura-del-proyecto)
 5. [Componentes Principales](#componentes-principales)
 6. [Funcionalidades Implementadas](#funcionalidades-implementadas)
-7. [Guía de Mantenimiento](#guía-de-mantenimiento)
+7. [Algoritmos y Cálculos](#algoritmos-y-cálculos)
+8. [Guía de Mantenimiento](#guía-de-mantenimiento)
+9. [Requisitos del Sistema](#requisitos-del-sistema)
+10. [Consideraciones de Seguridad](#consideraciones-de-seguridad)
 
 ## Introducción
 
-Este manual técnico documenta la arquitectura, componentes y funcionamiento interno de la aplicación web BodyRun, una plataforma dedicada a la nutrición y bienestar que ofrece calculadoras de índice de masa corporal (IMC), superávit calórico, déficit calórico y otras herramientas relacionadas con la alimentación saludable.
+Este manual técnico documenta la implementación y estructura del proyecto BodyRun, una aplicación web dedicada al bienestar y la nutrición. El documento está dirigido a desarrolladores y personal técnico que necesiten mantener, modificar o ampliar la aplicación.
 
 ## Arquitectura del Sistema
 
-La aplicación sigue una arquitectura cliente-servidor simplificada:
+BodyRun implementa una arquitectura cliente-servidor simplificada, con todo el procesamiento realizado en el lado del cliente mediante JavaScript. La aplicación sigue un patrón de diseño modular para facilitar el mantenimiento y la escalabilidad.
 
-- **Frontend**: Interfaz de usuario desarrollada con HTML5, CSS3 y JavaScript.
-- **Backend**: Actualmente implementado con JavaScript del lado del cliente, con planes futuros para migrar a una API RESTful.
-- **Base de Datos**: Actualmente utiliza almacenamiento local (localStorage) y objetos JavaScript para la información de alimentos.
+### Diagrama de Arquitectura
+
+```
+Usuario <-> Navegador Web <-> HTML/CSS/JS <-> Lógica de Cálculo <-> Base de Datos de Alimentos (JS)
+```
 
 ## Tecnologías Utilizadas
 
 ### Frontend
-- HTML5 para la estructura de la página
-- CSS3 para estilos y animaciones
-- JavaScript para la lógica de la aplicación
-- Bootstrap 4.5.2 como framework CSS
-- jQuery 3.6.0 para manipulación del DOM
-- Fontello para iconos personalizados
+- **HTML5**: Estructura semántica para el contenido
+- **CSS3**: Estilos y diseño responsivo
+- **Bootstrap 4.5.2**: Framework CSS para componentes de interfaz
+- **JavaScript**: Lógica de cliente y manipulación del DOM
+- **jQuery 3.6.0**: Biblioteca JavaScript para simplificar operaciones DOM
 
-### Herramientas de Desarrollo
-- Visual Studio Code como IDE
-- Git para control de versiones
-- GitHub para alojamiento del repositorio
+### Recursos
+- **Fontello**: Biblioteca de iconos personalizados
+- **Imágenes**: Formato JPG, PNG y WebP optimizados
 
-## Estructura de Archivos
+## Estructura del Proyecto
 
 ```
 /
-├── css/                  # Archivos de estilos
-│   ├── fontello.css      # Estilos para iconos
-│   ├── preloader.css     # Estilos para animación de carga
+├── css/                  # Archivos de estilo
+│   ├── bootstrap*.css    # Archivos de Bootstrap
+│   ├── fontello*.css     # Estilos de iconos
 │   ├── main.css          # Estilos principales
+│   ├── preloader.css     # Estilos del precargador
 │   └── login-register.css # Estilos para autenticación
-├── font/                 # Fuentes e iconos
-├── img/                  # Imágenes del sitio
+├── font/                 # Archivos de fuentes
+│   └── fontello.*        # Fuentes de iconos
+├── img/                  # Recursos de imágenes
 ├── js/                   # Scripts JavaScript
-│   ├── bootstrap.bundle.min.js # Componentes Bootstrap
-│   ├── preloader.js      # Animación de carga
-│   ├── food-database.js  # Base de datos de alimentos
-│   └── main.js           # Lógica principal
-└── index.html           # Página principal
+│   ├── bootstrap*.js      # Scripts de Bootstrap
+│   ├── food-database.js   # Base de datos de alimentos
+│   ├── main.js            # Lógica principal
+│   └── preloader.js       # Funcionalidad de precarga
+└── index.html            # Página principal
 ```
 
 ## Componentes Principales
 
-### 1. Sistema de Navegación
+### Navegación
+Implementada como una barra de navegación Bootstrap con menús desplegables para servicios y opciones. Incluye enlaces a redes sociales y es completamente responsiva.
 
-Implementado con Bootstrap Navbar, permite acceder a las diferentes secciones de la aplicación. Incluye menús desplegables para servicios y opciones de usuario.
+### Carrusel
+Utiliza el componente Carousel de Bootstrap para mostrar imágenes promocionales con superposición de texto y controles de navegación personalizados.
 
-```html
-<nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top" id="menu">
-    <!-- Estructura de navegación -->
-</nav>
-```
+### Tarjetas de Servicios
+Implementadas como componentes Card de Bootstrap con encabezados, imágenes y botones de acción que activan modales específicos.
 
-### 2. Carrusel de Imágenes
+### Modales
+Ventanas emergentes personalizadas para cada calculadora (IMC, Superávit, Déficit) con formularios interactivos y visualización de resultados.
 
-Implementado con Bootstrap Carousel, muestra imágenes promocionales con superposición de texto.
-
-```html
-<div id="mainCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Estructura del carrusel -->
-</div>
-```
-
-### 3. Tarjetas de Servicios
-
-Muestran los diferentes servicios ofrecidos (IMC, superávit calórico, déficit calórico) con imágenes y botones para acceder a cada calculadora.
-
-```html
-<div class="card">
-    <!-- Estructura de tarjeta de servicio -->
-</div>
-```
-
-### 4. Modales de Calculadoras
-
-Ventanas emergentes que contienen los formularios para cada calculadora. Implementadas con CSS y JavaScript personalizado.
-
-```html
-<div id="bmiModal" class="modal">
-    <!-- Estructura del modal de IMC -->
-</div>
-```
-
-### 5. Animación de Precarga
-
-Implementada con CSS y JavaScript, muestra una animación mientras se carga la página.
-
-```html
-<div id="loader">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-</div>
-```
+### Footer
+Pie de página estructurado con información de contacto, enlaces rápidos y derechos de autor.
 
 ## Funcionalidades Implementadas
 
-### 1. Calculadora de IMC
+### Precargador
+Implementado en `preloader.js`, muestra una animación durante la carga inicial de la página y se oculta cuando el contenido está listo.
 
-Permite al usuario calcular su Índice de Masa Corporal ingresando peso y altura.
+### Calculadora de IMC
+Permite al usuario ingresar peso y altura para calcular su Índice de Masa Corporal y mostrar la categoría correspondiente.
 
-**Fórmula implementada**: IMC = peso (kg) / (altura (m))²
+### Calculadora de Superávit Calórico
+Calcula el gasto energético total (TEE) basado en datos del usuario y permite añadir calorías adicionales para ganar peso.
 
-**Archivo**: `main.js`
+### Calculadora de Déficit Calórico
+Similar a la calculadora de superávit, pero orientada a la reducción de calorías para pérdida de peso.
 
-### 2. Calculadora de Superávit Calórico
+## Algoritmos y Cálculos
 
-Calcula el gasto energético total (TEE) del usuario basado en sexo, peso, altura, edad y nivel de actividad, y luego añade calorías adicionales para ganar peso.
+### Cálculo del IMC
+```javascript
+IMC = peso / (altura * altura)
+```
+Donde peso está en kilogramos y altura en metros.
 
-**Fórmula base**: 
-- Hombres: TMB = 10 × peso (kg) + 6.25 × altura (cm) - 5 × edad (años) + 5
-- Mujeres: TMB = 10 × peso (kg) + 6.25 × altura (cm) - 5 × edad (años) - 161
+### Cálculo del Gasto Energético Basal (BMR)
+Utiliza la fórmula de Mifflin-St Jeor:
 
-**Archivo**: `main.js`
+**Para hombres:**
+```javascript
+BMR = 10 * peso + 6.25 * altura - 5 * edad + 5
+```
 
-### 3. Calculadora de Déficit Calórico
+**Para mujeres:**
+```javascript
+BMR = 10 * peso + 6.25 * altura - 5 * edad - 161
+```
 
-Similar a la calculadora de superávit, pero resta calorías del gasto energético total para promover la pérdida de peso.
+### Cálculo del Gasto Energético Total (TEE)
+Multiplica el BMR por un factor de actividad:
 
-**Archivo**: `main.js`
+```javascript
+TEE = BMR * factorActividad
+```
+
+Donde factorActividad varía según el nivel de actividad física seleccionado.
 
 ## Guía de Mantenimiento
 
-### Añadir Nuevas Funcionalidades
+### Modificación de Estilos
+Los estilos principales se encuentran en `css/main.css`. Para modificaciones específicas de componentes, revisar los archivos CSS correspondientes.
 
-1. Para añadir una nueva calculadora:
-   - Crear una nueva tarjeta en la sección de servicios
-   - Implementar el modal correspondiente
-   - Añadir la lógica JavaScript en `main.js`
+### Actualización de Contenido
+Las imágenes del carrusel y tarjetas se pueden actualizar modificando las rutas en `index.html`.
 
-2. Para modificar la base de datos de alimentos:
-   - Editar el archivo `food-database.js`
-   - Seguir el formato de objetos existente
+### Modificación de Cálculos
+Los algoritmos de cálculo se encuentran en `js/main.js`. Cualquier ajuste a las fórmulas debe realizarse en este archivo.
 
-### Actualización de Dependencias
+### Adición de Nuevas Funcionalidades
+1. Crear los elementos HTML necesarios en `index.html`
+2. Implementar la lógica en `js/main.js` o crear un nuevo archivo JS específico
+3. Añadir los estilos correspondientes en `css/main.css` o crear un nuevo archivo CSS
 
-- Bootstrap: Actualizar los archivos CSS y JS en sus respectivas carpetas
-- jQuery: Actualizar el archivo en la carpeta `js`
-- Fontello: Generar un nuevo paquete y reemplazar los archivos en `css` y `font`
+## Requisitos del Sistema
 
-### Optimización de Rendimiento
+### Servidor
+- Servidor web básico (Apache, Nginx, etc.)
+- No requiere procesamiento del lado del servidor
 
-- Minificar archivos CSS y JavaScript para producción
-- Optimizar imágenes para reducir tiempos de carga
-- Implementar carga diferida (lazy loading) para imágenes
+### Cliente
+- Navegadores modernos con soporte para ES6
+- Conexión a Internet para cargar recursos externos (Bootstrap CDN)
 
----
+## Consideraciones de Seguridad
+
+- La aplicación no almacena datos de usuario en servidores externos
+- Todo el procesamiento se realiza localmente en el navegador del usuario
+- No se implementan cookies de seguimiento
+- Los cálculos son aproximaciones y se debe advertir al usuario que consulte a profesionales de la salud para decisiones importantes
 
 Este manual técnico está sujeto a actualizaciones conforme el proyecto evolucione. Para cualquier consulta técnica, contactar al equipo de desarrollo.
