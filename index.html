@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <title>Inicio | BodyRun Tu meta en segundos</title>
+</head>
+<body>
+    
+    <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    
+    <div id="contenido">
+        <!--inicia la barra de navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top" id="menu">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo negrito.PNG" alt="Logotipo BodyRun Tu meta en segundos" width="150" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#inicio" aria-controls="inicio" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="inicio">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><span class="icon-home"></span>Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="icon-users"></span>¿Quienes somos?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicios"> 
+                            <li><a class="dropdown-item" href="#"><span class="icon-chart-bar"></span> Indice de masa corporal</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-up-bold"></span> Superavit calorico</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-down-fat"></span> Deficit calorico</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-balance-scale"></span> Mantener peso</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-food"></span> Dietas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-envelope-open"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="opciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Opciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="opciones"> 
+                            <li><a class="dropdown-item" href="#"><span class="icon-user"></span> Iniciar sesion</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-help"></span> Acerca de</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-cog-alt"></span> Configuracion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--termina la barra de navegacion-->
+        <!--inicia slider-->
+        <div class="carousel-container">
+            <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                    <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mainCarousel" data-slide-to="1"></li>
+                    <li data-target="#mainCarousel" data-slide-to="2"></li>
+                    <li data-target="#mainCarousel" data-slide-to="3"></li>
+                    <li data-target="#mainCarousel" data-slide-to="4"></li>
+                </ol>
+                
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/imagen 1 slider.jpg" alt="Entrenamiento de fuerza">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h3>BodyRun  Tu meta en segundos</h3>
+                            <p>Te ofrecemos la mejor informacion para garantizar tu calidad de vida.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="img/ejercicio.jpg" alt="Nutrición deportiva">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h3>Nutrición a tus manos</h3>
+                            <p>Planes alimenticios adaptados a tus objetivos y necesidades específicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="img/imagen 3 slider.png" alt="Nutrición deportiva">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h3>Nutrición Deportiva</h3>
+                            <p>Planes alimenticios adaptados a tus objetivos y necesidades específicas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="img/dietas.jpg" alt="Nutrición deportiva">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h3>Consulta tu estado</h3>
+                            <p>Es importante saber en que estado fisico estas, mira nuestros servicios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="img/imagen 5 slider.webp" alt="Entrenamiento funcional">
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-caption">
+                            <h3>BodyRun  Tu meta en segundos</h3>
+                            <p>Somos una empresa 100% colombiana y enfocada a tu salud.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controles (solo iconos, sin texto visible) -->
+                <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                    <span class="icon-left-open" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                    <span class="icon-right-open" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+        <!--termina slider--> 
+        <!-- inicia Servicios -->
+        <div class="container my-5">
+            <h2 class="text-center mb-4 bg-dark">Nuestros Servicios</h2>
+            <div class="row card-container"> <!-- Clase para espaciado -->
+                <!-- Servicio 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark">
+                            <h5 class="card-title mb-0">Índice de masa corporal</h5>
+                        </div>
+                        <img src="img/indice de masa corporal.webp" class="card-img-top" alt="Servicio 1">
+                        <div class="card-body">
+                            <p class="card-header">Verifica en que estado de peso te encuentras.</p>
+                            <button class="btn btn-primary" id="infoButton">Más información</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Modal para el IMC -->
+                <div id="bmiModal" class="modal">
+                    <div class="parallax2"></div> <!-- Fondo parallax -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-body">
+                            <div class="info">
+                                <h2>Cálculo del Índice de Masa Corporal (IMC)</h2>
+                                <p>La fórmula para calcular el IMC es:</p>
+                                <p><strong>IMC = peso (En Kilogramos) / (altura (En Metros))^2</strong></p>
+                                <label for="weight">Peso (En Kilogramos):</label>
+                                <input type="number" id="weight" placeholder="Ingrese su peso" required>
+                                <label for="height">Altura (En metros):</label>
+                                <input type="number" id="height" placeholder="Ingrese su altura" required>
+                                <button class= "btn btn-primary" id="calculateBmi">Calcular IMC</button>
+                                <p id="result"></p>
+                            </div>
+                            <div class="image">
+                                <img src="img/estado de IMC.jpg" alt="Estado del IMC" id="bmiImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Servicio 2 -->
+                 
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark">
+                            <h5 class="card-title mb-0">Superavit calorico</h5>
+                        </div>
+                        <img src="img/superavit calorico.jpeg" class="card-img-top" alt="Servicio 2">
+                        <div class="card-body">
+                            <p class="card-header">Aumenta tu ingesta para alcanzar la meta.</p>
+                            <button class="btn btn-primary" id="superavitButton">Más información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modificación para el modal de superávit calórico -->
+                <div id="superavitModal" class="modal superavit-modal">
+                    <div class="modal-content">
+                        <div class="parallax2"></div> <!-- Fondo parallax -->
+                        <span class="close" id="closeSuperavitModal">&times;</span>
+                        <div class="superavit-body">
+                            <h2>Cálculo de superávit calórico</h2>
+                            <p>Para calcular el superávit calórico es necesario calcular tu gasto energético total:</p>
+                            
+                            <!-- Selección de sexo creativa (NUEVA) -->
+                            <h3>Selecciona tu sexo</h3>
+                            <div class="sex-selection-creative">
+                                <div class="sex-card" data-sex="male">
+                                    <input type="radio" name="superavitSex" id="superavitMale" value="male">
+                                    <div class="sex-card-icon">♂</div>
+                                    <div class="sex-card-label">Hombre</div>
+                                </div>
+                                <div class="sex-card" data-sex="female">
+                                    <input type="radio" name="superavitSex" id="superavitFemale" value="female">
+                                    <div class="sex-card-icon">♀</div>
+                                    <div class="sex-card-label">Mujer</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Formulario para calcular el gasto energético total -->
+                            <div class="form-group">
+                                <label for="superavitWeight">Peso (En Kilogramos):</label>
+                                <input type="number" id="superavitWeight" placeholder="Ingrese su peso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="superavitHeight">Altura (En metros):</label>
+                                <input type="number" id="superavitHeight" placeholder="Ingrese su altura" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="superavitAge">Edad:</label>
+                                <input type="number" id="superavitAge" placeholder="Ingrese su edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="activityLevel">Nivel de actividad física:</label>
+                                <select id="activityLevel">
+                                    <option value="sedentary">Sedentario (poco o ningún ejercicio)</option>
+                                    <option value="light">Ligeramente activo (ejercicio ligero 1-3 días/semana)</option>
+                                    <option value="moderate">Moderadamente activo (ejercicio moderado 3-5 días/semana)</option>
+                                    <option value="active">Muy activo (ejercicio intenso 6-7 días/semana)</option>
+                                    <option value="very_active">Extremadamente activo (ejercicio muy intenso, trabajo físico)</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn btn-primary" id="calculateTEE">Calcular gasto energético total</button>
+                            <div class="result-box">
+                                <p id="teeResult"></p>
+                                <!-- Campo oculto para almacenar el valor del TEE -->
+                                <input type="hidden" id="teeValue" value="">
+                            </div>
+                            
+                            <!-- Sección de superávit calórico (inicialmente oculta) -->
+                            <div id="surplusSection" class="d-none">
+                                <h3>Superávit calórico</h3>
+                                <p>Escoge las calorías que quieres implementar de más a tu gasto energético total:</p>
+                                
+                                <div class="calories-options">
+                                    <div class="calories-option">
+                                        <input type="radio" id="calories500" name="extraCalories" value="500">
+                                        <label for="calories500">500 calorías</label>
+                                    </div>
+                                    <div class="calories-option">
+                                        <input type="radio" id="calories800" name="extraCalories" value="800">
+                                        <label for="calories800">800 calorías</label>
+                                    </div>
+                                    <div class="calories-option">
+                                        <input type="radio" id="calories950" name="extraCalories" value="950">
+                                        <label for="calories950">950 calorías</label>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-primary" id="calculateSurplus">Calcular superávit</button>
+                                <div class="result-box">
+                                    <p id="surplusResult"></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagen informativa -->
+                            <div class="image">
+                                <img src="img/superavit calorico tarjeta 2.jpg" alt="Superávit calórico" id="superavitImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  
+                <!-- Servicio 3: Déficit Calórico  -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark">
+                            <h5 class="card-title mb-0">Déficit calórico</h5>
+                        </div>
+                        <img src="img/deficit calorico.jpg" class="card-img-top" alt="Déficit Calórico">
+                        <div class="card-body">
+                            <p class="card-header">Reduce calorías para perder peso de forma saludable.</p>
+                            <button class="btn btn-primary" id="deficitButton">Más información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal de déficit calórico -->
+                <div id="deficitModal" class="modal deficit-modal">
+                    <div class="modal-content">
+                        <div class="parallax2"></div> 
+                        <span class="close" id="closeDeficitModal">&times;</span>
+                        <div class="deficit-body">
+                            <h2>Cálculo de déficit calórico</h2>
+                            <p>El déficit calórico es clave para perder peso de forma saludable. Primero calculemos tu gasto energético total:</p>
+                            
+                            <!-- Selección de sexo creativa -->
+                            <h3>Selecciona tu sexo</h3>
+                            <div class="sex-selection-creative">
+                                <div class="sex-card" data-sex="male">
+                                    <input type="radio" name="deficitSex" id="deficitMale" value="male">
+                                    <div class="sex-card-icon">♂</div>
+                                    <div class="sex-card-label">Hombre</div>
+                                </div>
+                                <div class="sex-card" data-sex="female">
+                                    <input type="radio" name="deficitSex" id="deficitFemale" value="female">
+                                    <div class="sex-card-icon">♀</div>
+                                    <div class="sex-card-label">Mujer</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Formulario para calcular el gasto energético total -->
+                            <div class="form-group">
+                                <label for="deficitWeight">Peso (En Kilogramos):</label>
+                                <input type="number" id="deficitWeight" placeholder="Ingrese su peso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="deficitHeight">Altura (En metros):</label>
+                                <input type="number" id="deficitHeight" placeholder="Ingrese su altura" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="deficitAge">Edad:</label>
+                                <input type="number" id="deficitAge" placeholder="Ingrese su edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="deficitActivityLevel">Nivel de actividad física:</label>
+                                <select id="deficitActivityLevel">
+                                    <option value="sedentary">Sedentario (poco o ningún ejercicio)</option>
+                                    <option value="light">Ligeramente activo (ejercicio ligero 1-3 días/semana)</option>
+                                    <option value="moderate">Moderadamente activo (ejercicio moderado 3-5 días/semana)</option>
+                                    <option value="active">Muy activo (ejercicio intenso 6-7 días/semana)</option>
+                                    <option value="very_active">Extremadamente activo (ejercicio muy intenso, trabajo físico)</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn btn-primary" id="calculateDeficitTEE">Calcular gasto energético total</button>
+                            <div class="result-box">
+                                <p id="deficitTeeResult"></p>
+                                <!-- Campo oculto para almacenar el valor del TEE -->
+                                <input type="hidden" id="deficitTeeValue" value="">
+                            </div>
+                            
+                            <!-- Sección de déficit calórico (inicialmente oculta) -->
+                            <div id="deficitSection" class="d-none">
+                                <h3>Déficit calórico</h3>
+                                <p>Escoge el déficit calórico que deseas implementar para perder peso:</p>
+                                
+                                <div class="calories-options">
+                                    <div class="calories-option">
+                                        <input type="radio" id="deficitCalories300" name="deficitCalories" value="300">
+                                        <label for="deficitCalories300">300 calorías (pérdida suave)</label>
+                                    </div>
+                                    <div class="calories-option">
+                                        <input type="radio" id="deficitCalories500" name="deficitCalories" value="500">
+                                        <label for="deficitCalories500">500 calorías (pérdida moderada)</label>
+                                    </div>
+                                    <div class="calories-option">
+                                        <input type="radio" id="deficitCalories750" name="deficitCalories" value="750">
+                                        <label for="deficitCalories750">750 calorías (pérdida intensa)</label>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-primary" id="calculateDeficit">Calcular déficit</button>
+                                <div class="result-box">
+                                    <p id="deficitResult"></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagen informativa -->
+                            <div class="image">
+                                <img src="img/deficit calorico tarjeta 4.avif" alt="Déficit calórico" id="deficitImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row card-container"> <!-- Nueva fila para los siguientes servicios -->
+
+                <!-- Servicio 4: Mantenimiento de Peso -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark">
+                            <h5 class="card-title mb-0">Mantenimiento de peso</h5>
+                        </div>
+                        <img src="img/mantener peso.webp" class="card-img-top" alt="Mantenimiento de Peso">
+                        <div class="card-body">
+                            <p class="card-header">Mantén tu peso ideal con el balance calórico adecuado.</p>
+                            <button class="btn btn-primary" id="maintenanceButton">Más información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modificación para el modal de mantenimiento de peso -->
+                <div id="maintenanceModal" class="modal maintenance-modal">
+                    <div class="modal-content">
+                        <div class="parallax2"></div> <!-- Mismo fondo parallax que las otras tarjetas -->
+                        <span class="close" id="closeMaintenanceModal">&times;</span>
+                        <div class="maintenance-body">
+                            <h2>Cálculo de mantenimiento de peso</h2>
+                            <p>Mantener tu peso ideal requiere un balance calórico adecuado. Vamos a calcular tus necesidades exactas:</p>
+                            
+                            <!-- Selección de sexo creativa -->
+                            <h3>Selecciona tu sexo</h3>
+                            <div class="sex-selection-creative">
+                                <div class="sex-card" data-sex="male">
+                                    <input type="radio" name="maintenanceSex" id="maintenanceMale" value="male">
+                                    <div class="sex-card-icon">♂</div>
+                                    <div class="sex-card-label">Hombre</div>
+                                </div>
+                                <div class="sex-card" data-sex="female">
+                                    <input type="radio" name="maintenanceSex" id="maintenanceFemale" value="female">
+                                    <div class="sex-card-icon">♀</div>
+                                    <div class="sex-card-label">Mujer</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Formulario para calcular el gasto energético total -->
+                            <div class="form-group">
+                                <label for="maintenanceWeight">Peso (En Kilogramos):</label>
+                                <input type="number" id="maintenanceWeight" placeholder="Ingrese su peso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="maintenanceHeight">Altura (En metros):</label>
+                                <input type="number" id="maintenanceHeight" placeholder="Ingrese su altura" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="maintenanceAge">Edad:</label>
+                                <input type="number" id="maintenanceAge" placeholder="Ingrese su edad" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="maintenanceActivityLevel">Nivel de actividad física:</label>
+                                <select id="maintenanceActivityLevel">
+                                    <option value="sedentary">Sedentario (poco o ningún ejercicio)</option>
+                                    <option value="light">Ligeramente activo (ejercicio ligero 1-3 días/semana)</option>
+                                    <option value="moderate">Moderadamente activo (ejercicio moderado 3-5 días/semana)</option>
+                                    <option value="active">Muy activo (ejercicio intenso 6-7 días/semana)</option>
+                                    <option value="very_active">Extremadamente activo (ejercicio muy intenso, trabajo físico)</option>
+                                </select>
+                            </div>
+                            
+                            <button class="btn btn-primary" id="calculateMaintenance">Calcular calorías de mantenimiento</button>
+                            <div class="result-box">
+                                <p id="maintenanceResult"></p>
+                            </div>
+                            
+                            <!-- Recomendaciones para mantener el peso (NUEVA) -->
+                            <div id="maintenanceTips" class="maintenance-tips d-none">
+                                <h4>Recomendaciones para mantener tu peso</h4>
+                                <ul>
+                                    <li>Mantén un registro diario de tus comidas para asegurar que estás consumiendo las calorías adecuadas.</li>
+                                    <li>Realiza actividad física regularmente, idealmente combinando ejercicio cardiovascular y entrenamiento de fuerza.</li>
+                                    <li>Distribuye tus comidas en 4-5 porciones a lo largo del día para mantener estable tu metabolismo.</li>
+                                    <li>Prioriza alimentos ricos en proteínas y fibra, que te ayudarán a sentirte satisfecho por más tiempo.</li>
+                                    <li>Bebe suficiente agua (al menos 2 litros diarios) para mantener una buena hidratación.</li>
+                                    <li>Duerme entre 7-8 horas diarias, ya que el descanso adecuado es crucial para mantener un peso saludable.</li>
+                                    <li>Reduce el consumo de alimentos ultraprocesados, azúcares refinados y grasas saturadas.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Imagen informativa -->
+                            <div class="image">
+                                <img src="img/mantener peso tarjeta.jpg" alt="Mantenimiento de peso" id="maintenanceImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- Servicio 5 -->
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header text-white bg-dark">
+                            <h5 class="card-title mb-0">Dietas</h5>
+                        </div>
+                        <img src="img/dietas.jpg" class="card-img-top" alt="Dietas personalizadas">
+                        <div class="card-body">
+                            <p class="card-header">Plan de alimentación personalizado .</p>
+                            <button class="btn btn-primary" id="dietButton">Más información</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal para dietas personalizadas (NUEVO) -->
+                <div id="dietModal" class="modal diet-modal">
+                    <div class="modal-content">
+                        <div class="parallax-diet"></div> <!-- Fondo parallax con tono diferente -->
+                        <span class="close" id="closeDietModal">&times;</span>
+                        <div class="diet-body">
+                            <h2>Plan de alimentación personalizado</h2>
+                            <p>Crea un plan de alimentación adaptado a tus objetivos y necesidades específicas. Primero, selecciona tu objetivo:</p>
+                            
+                            <!-- Selección de objetivo -->
+                            <div class="goal-selection">
+                                <div class="goal-card" data-goal="deficit">
+                                    <input type="radio" name="dietGoal" id="deficitGoal" value="deficit">
+                                    <div class="goal-card-icon">↓</div>
+                                    <div class="goal-card-label">Déficit Calórico</div>
+                                </div>
+                                <div class="goal-card" data-goal="maintenance">
+                                    <input type="radio" name="dietGoal" id="maintenanceGoal" value="maintenance">
+                                    <div class="goal-card-icon">⟷</div>
+                                    <div class="goal-card-label">Mantenimiento</div>
+                                </div>
+                                <div class="goal-card" data-goal="surplus">
+                                    <input type="radio" name="dietGoal" id="surplusGoal" value="surplus">
+                                    <div class="goal-card-icon">↑</div>
+                                    <div class="goal-card-label">Superávit Calórico</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sección de calorías -->
+                            <div class="calories-section">
+                                <h3>Ingresa tus calorías objetivo</h3>
+                                <p>Si ya calculaste tus calorías en otra sección, puedes ingresarlas aquí. De lo contrario, te recomendamos usar las calculadoras de déficit, mantenimiento o superávit calórico.</p>
+                                <div class="form-group">
+                                    <label for="targetCalories">Calorías diarias objetivo:</label>
+                                    <input type="number" id="targetCalories" placeholder="Ej: 2000" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Sección de alergias e intolerancias -->
+                            <div class="allergies-section">
+                                <h3>Alergias e intolerancias alimentarias</h3>
+                                <p>Indica los alimentos a los que eres alérgico o intolerante para excluirlos de tu plan de alimentación:</p>
+                                
+                                <!-- Opción de no tener alergias -->
+                                <div class="no-allergies" id="noAllergies">
+                                    No soy alérgico a ningún alimento
+                                </div>
+                                
+                                <!-- Alergias comunes para selección rápida -->
+                                <div class="common-allergies">
+                                    <div class="common-allergy" data-allergy="Lácteos">Lácteos</div>
+                                    <div class="common-allergy" data-allergy="Gluten">Gluten</div>
+                                    <div class="common-allergy" data-allergy="Frutos secos">Frutos secos</div>
+                                    <div class="common-allergy" data-allergy="Mariscos">Mariscos</div>
+                                    <div class="common-allergy" data-allergy="Huevo">Huevo</div>
+                                    <div class="common-allergy" data-allergy="Soja">Soja</div>
+                                </div>
+                                
+                                <!-- Etiquetas de alergias seleccionadas -->
+                                <div class="allergies-tags" id="allergiesTags">
+                                    <!-- Las etiquetas se añadirán dinámicamente -->
+                                </div>
+                                
+                                <!-- Input para añadir alergias -->
+                                <div class="allergy-input">
+                                    <input type="text" id="allergyInput" placeholder="Escribe un alimento y presiona Añadir">
+                                    <button id="addAllergy">Añadir</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Botón para generar dieta -->
+                            <button class="btn btn-primary" id="generateDiet">Generar plan de alimentación</button>
+                            
+                            <!-- Spinner de carga -->
+                            <div class="loading-spinner" id="loadingSpinner">
+                                <div class="spinner"></div>
+                                <p class="loading-text">Creando tu plan personalizado...</p>
+                            </div>
+                            
+                            <!-- Dieta semanal (inicialmente oculta) -->
+                            <div class="weekly-diet" id="weeklyDiet">
+                                <h3>Tu plan de alimentación semanal</h3>
+                                
+                                <!-- Pestañas para los días de la semana -->
+                                <div class="day-tabs">
+                                    <button class="day-tab active" data-day="monday">Lunes</button>
+                                    <button class="day-tab" data-day="tuesday">Martes</button>
+                                    <button class="day-tab" data-day="wednesday">Miércoles</button>
+                                    <button class="day-tab" data-day="thursday">Jueves</button>
+                                    <button class="day-tab" data-day="friday">Viernes</button>
+                                    <button class="day-tab" data-day="saturday">Sábado</button>
+                                    <button class="day-tab" data-day="sunday">Domingo</button>
+                                </div>
+                                
+                                <!-- Contenido para cada día -->
+                                <div class="day-content active" id="monday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="tuesday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="wednesday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="thursday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="friday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="saturday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                <div class="day-content" id="sunday">
+                                    <!-- El contenido se generará dinámicamente -->
+                                </div>
+                                
+                                <!-- Resumen de la dieta -->
+                                <div class="diet-summary">
+                                    <h4>Resumen nutricional semanal</h4>
+                                    <p>Este plan de alimentación está diseñado para ayudarte a alcanzar tu objetivo de <span id="goalSummary"></span>. Está equilibrado para proporcionar todos los nutrientes esenciales que tu cuerpo necesita.</p>
+                                    <p>Calorías diarias promedio: <strong id="avgCalories"></strong></p>
+                                    <p>Distribución de macronutrientes:</p>
+                                    <ul>
+                                        <li>Proteínas: <strong id="proteinPercent"></strong></li>
+                                        <li>Carbohidratos: <strong id="carbsPercent"></strong></li>
+                                        <li>Grasas: <strong id="fatsPercent"></strong></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Consejos para seguir la dieta -->
+                                <div class="diet-tips">
+                                    <h4>Consejos para seguir tu plan</h4>
+                                    <ul>
+                                        <li>Mantén un horario regular de comidas para estabilizar tu metabolismo.</li>
+                                        <li>Bebe al menos 2 litros de agua al día para mantenerte hidratado.</li>
+                                        <li>Prepara tus comidas con anticipación para evitar decisiones impulsivas.</li>
+                                        <li>Ajusta las porciones según sea necesario para alcanzar tus objetivos calóricos.</li>
+                                        <li>Combina este plan con actividad física regular para mejores resultados.</li>
+                                        <li>Escucha a tu cuerpo y ajusta si sientes hambre excesiva o falta de energía.</li>
+                                        <li>Consulta con un profesional de la salud antes de hacer cambios significativos en tu alimentación.</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Botón para imprimir dieta -->
+                                <button class="btn btn-primary" id="printDiet">Imprimir plan de alimentación</button>
+                            </div>
+                            
+                            <!-- Imagen informativa -->
+                            <div class="diet-image">
+                                <img src="img/dietas tarjeta.webp" alt="Plan de alimentación saludable" id="dietImage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+    <!--termina servicios-->
+    <!--inicio jumbotron-->
+    <div class="jumbotron jumbo">
+        <div class="overlay-dark"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-7 jumbotron-content">
+                    <div class="badge-container">
+                        <span class="badge-custom">Tu camino hacia una vida saludable</span>
+                    </div>
+                    <h1 class="display-4 text-light jumbotron-title">Transforma tu cuerpo, <span class="highlight">cambia tu vida</span></h1>
+                    <p class="lead text-light">
+                        En BodyRun te ofrecemos las herramientas precisas para alcanzar tus objetivos: 
+                        desde calcular tu IMC hasta crear planes personalizados de déficit o superávit calórico. 
+                        Tu meta está a solo unos segundos de distancia.
+                    </p>
+                    <div class="jumbotron-features">
+                        <div class="feature-item">
+                            <i class="icon-chart-bar"></i>
+                            <span>IMC</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="icon-down-fat"></i>
+                            <span>Déficit</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="icon-up-bold"></i>
+                            <span>Superávit</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="icon-balance-scale"></i>
+                            <span>Mantenimiento</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-lg mt-4" id="moreInfoBtn">Más información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal para Más Información -->
+    <div id="moreInfoModal" class="modal">
+        <div class="parallax2"></div>
+        <span class="close" id="closeMoreInfoModal">&times;</span>
+        <div class="modal-content">
+            <div class="modal-body more-info-modal-body">
+                <div class="more-info-title">
+                    <h2>Nuestros Servicios en Detalle</h2>
+                </div>
+                <div class="more-info-cta">
+                    <h3>¿Listo para comenzar tu transformación?</h3>
+                    <a href="#" class="btn btn-primary btn-lg" id="startNowBtn">¡Comienza ahora!</a>
+                </div>
+                </div>
+                <div class="info-sections-container">
+                    <div class="info-section">
+                        <div class="info-icon"><i class="icon-chart-bar"></i></div>
+                        <div class="info-content">
+                            <h3>Índice de Masa Corporal (IMC)</h3>
+                            <p>El IMC es una medida que relaciona tu peso y altura para evaluar si estás en un rango saludable. Nuestra calculadora te proporciona resultados precisos y recomendaciones personalizadas basadas en tu categoría de peso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="info-icon"><i class="icon-down-fat"></i></div>
+                        <div class="info-content">
+                            <h3>Déficit Calórico</h3>
+                            <p>Si tu objetivo es perder peso de forma saludable, nuestro calculador de déficit calórico te ayudará a determinar exactamente cuántas calorías necesitas consumir para alcanzar tus metas. Ofrecemos diferentes niveles de déficit adaptados a tus necesidades y estilo de vida.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="info-icon"><i class="icon-up-bold"></i></div>
+                        <div class="info-content">
+                            <h3>Superávit Calórico</h3>
+                            <p>Ideal para quienes buscan aumentar su masa muscular. Nuestra herramienta calcula el superávit calórico óptimo para maximizar el crecimiento muscular mientras minimiza la acumulación de grasa, adaptándose a tu nivel de actividad física.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="info-icon"><i class="icon-balance-scale"></i></div>
+                        <div class="info-content">
+                            <h3>Mantenimiento de Peso</h3>
+                            <p>Mantener un peso saludable es clave para el bienestar a largo plazo. Te ayudamos a calcular tus necesidades calóricas de mantenimiento y te ofrecemos consejos prácticos para mantener un equilibrio energético óptimo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="info-icon"><i class="icon-food"></i></div>
+                        <div class="info-content">
+                            <h3>Planes Alimenticios Personalizados</h3>
+                            <p>Basándonos en tus objetivos, preferencias y posibles alergias, creamos planes de alimentación semanales completamente personalizados que te ayudarán a alcanzar tus metas de forma saludable y sostenible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--termina jumbotron-->
+    <section id="contacto">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-md-5">
+                    <div class="map-container">
+                        <img src="img/ubicacion mapa.jpg" class="img-fluid rounded shadow map-image" alt="Mapa de ubicación">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                        <div class="card-body">
+                            <div class="card-header text-white bg-dark">
+                                <h5 class="card-title mb-0">Tu opinión también cuenta</h5>
+                            </div>
+                            <form class="form-group" action="" method="post">
+                                <div class="py-2">
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+                                </div>
+                                <div class="py-2">
+                                    <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="form-label">Servicios (selecciona los que has utilizado)</label>
+                                    <div class="services-checkboxes">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="service1" name="servicios[]" value="1">
+                                            <label class="custom-control-label" for="service1">Índice de masa corporal</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="service2" name="servicios[]" value="2">
+                                            <label class="custom-control-label" for="service2">Superávit calórico</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="service3" name="servicios[]" value="3">
+                                            <label class="custom-control-label" for="service3">Déficit calórico</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="service4" name="servicios[]" value="4">
+                                            <label class="custom-control-label" for="service4">Mantener peso</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="service5" name="servicios[]" value="5">
+                                            <label class="custom-control-label" for="service5">Dietas</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group py-2">
+                                    <label for="puntuacion">Puntúa nuestros servicios (1-10):</label>
+                                    <div class="d-flex align-items-center">
+                                        <input type="range" class="custom-range" min="1" max="10" step="1" id="puntuacion" name="puntuacion" value="8">
+                                        <span class="ml-3 rating-value" id="ratingValue">8</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <input type="submit" name="submit" value="Enviar" class="btn btn-primary btn-lg btn-block w-100">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--inicio parallax-->
+    <section id="parallax">
+        <div class="jumbotron parallax">
+            <div class="parallax-overlay"></div>
+            <div class="container-lg">
+                <h3 class="text-center services-title">Te ofrecemos los mejores servicios</h3>
+                <p class="text-center services-subtitle">Descubre todo lo que tenemos para ti</p>
+            </div>
+            <div class="container text-center">
+                <div class="row py-4 services-features">
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <img src="img/+10 recetas.png" alt="icono de recetas" class="icono-general">
+                            </div>
+                            <h4 class="service-title">+ 10 Dietas</h4>
+                            <p class="service-description">Planes alimenticios adaptados a tus necesidades y objetivos específicos.</p>
+                            <button class="btn btn-outline-light service-btn" data-service="dietas">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <img src="img/asesoria personalizada.png" alt="icono de asesoría" class="icono-general">
+                            </div>
+                            <h4 class="service-title">Asesorías Personalizadas</h4>
+                            <p class="service-description">Atención individualizada para alcanzar tus metas de forma efectiva.</p>
+                            <button class="btn btn-outline-light service-btn" data-service="asesorias">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <img src="img/descuentos exclusivos.png" alt="icono de descuentos" class="icono-general">
+                            </div>
+                            <h4 class="service-title">Descuentos Exclusivos</h4>
+                            <p class="service-description">Ofertas especiales para nuestros usuarios registrados.</p>
+                            <button class="btn btn-outline-light service-btn" data-service="descuentos">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--final parallax-->
+    <!--inicia footer-->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <!-- Columna 1: Sobre nosotros -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <div class="footer-about">
+                            <img src="img/logo negrito.PNG" alt="BodyRun Logo" class="footer-logo">
+                            <p class="footer-description">
+                                En BodyRun nos dedicamos a ayudarte a alcanzar tus metas de salud y bienestar con herramientas precisas y personalizadas.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" class="social-icon" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                                <a href="#" class="social-icon" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="Twitter"><i class="icon-whatsapp"></i></a>
+                                <a href="#" class="social-icon" aria-label="YouTube"><i class="icon-envelope-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna 2: Enlaces rápidos -->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Enlaces rápidos</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link"><i class="icon-right-open"></i> Inicio</a></li>
+                            <li><a href="#" class="footer-link"><i class="icon-right-open"></i> Servicios</a></li>
+                            <li><a href="#" class="footer-link"><i class="icon-right-open"></i> ¿Quiénes somos?</a></li>
+                            <li><a href="#" class="footer-link"><i class="icon-right-open"></i> Contacto</a></li>
+                            <li><a href="#" class="footer-link"><i class="icon-right-open"></i> Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna 3: Servicios -->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Servicios</h4>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link service-link" data-service="imc"><i class="icon-chart-bar"></i> IMC</a></li>
+                            <li><a href="#" class="footer-link service-link" data-service="deficit"><i class="icon-down-fat"></i> Déficit calórico</a></li>
+                            <li><a href="#" class="footer-link service-link" data-service="superavit"><i class="icon-up-bold"></i> Superávit calórico</a></li>
+                            <li><a href="#" class="footer-link service-link" data-service="mantenimiento"><i class="icon-balance-scale"></i> Mantenimiento</a></li>
+                            <li><a href="#" class="footer-link service-link" data-service="dietas"><i class="icon-food"></i> Dietas</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna 4: Contacto -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h4 class="footer-heading">Contacto</h4>
+                        <ul class="footer-contact">
+                            <li class="contact-item">
+                                <i class="icon-location"></i>
+                                <span>Calle Principal #123, Bogotá, Colombia</span>
+                            </li>
+                            <li class="contact-item">
+                                <i class="icon-phone"></i>
+                                <a href="tel:+573045408277">+57 304 540 8277</a>
+                            </li>
+                            <li class="contact-item">
+                                <i class="icon-envelope-open"></i>
+                                <a href="mailto:contacto@bodyrun.com">contacto@bodyrun.com</a>
+                            </li>
+                            <li class="contact-item">
+                                <i class="icon-clock"></i>
+                                <span>Lun - Vie: 8:00 AM - 6:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            &copy; <span id="currentYear"></span> BodyRun - Tu meta en segundos. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón para volver arriba -->
+        <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+            <i class="icon-up-open"></i>
+        </a>
+    </footer>
+    <!--termina footer-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script> <!-- Asegúrate de que este archivo sea el correcto -->
+    <script src="js/preloader.js"></script>
+    <script src="js/food-database.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+</body>
+</html>
+

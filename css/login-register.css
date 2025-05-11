@@ -1,0 +1,214 @@
+/* Estilos para los modales de login y registro */
+.login-modal-body,
+.register-modal-body,
+.about-modal-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.login-container,
+.register-container,
+.about-info {
+  flex: 1;
+  padding: 40px;
+  color: white;
+}
+
+.login-container h2,
+.register-container h2,
+.about-info h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #ab5a18;
+  padding-bottom: 10px;
+}
+
+.login-image,
+.register-image,
+.about-image {
+  flex: 0 0 40%;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+
+.login-image img,
+.register-image img,
+.about-image img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.login-slogan,
+.register-slogan,
+.version-info {
+  color: #ab5a18;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login-btn,
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login-options,
+.register-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-options p,
+.register-options p {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+.register-link,
+.login-link {
+  color: #ab5a18;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.register-link:hover,
+.login-link:hover {
+  color: #d46c25;
+  text-decoration: underline;
+}
+
+/* Estilos para el modal Acerca de */
+.about-section {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.about-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ab5a18;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.about-section p,
+.about-section ul,
+.about-section li {
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #ab5a18;
+  transform: translateY(-5px);
+}
+
+/* Servicios en grid para Acerca de */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(171, 90, 24, 0.2);
+}
+
+.service-icon {
+  font-size: 24px;
+  color: #ab5a18;
+  margin-bottom: 10px;
+}
+
+.service-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffcc80;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-modal-body,
+  .register-modal-body,
+  .about-modal-body {
+    flex-direction: column;
+  }
+
+  .login-image,
+  .register-image,
+  .about-image {
+    flex: 0 0 auto;
+    padding: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
