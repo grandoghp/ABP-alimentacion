@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <title>Mi Perfil | BodyRun Tu meta en segundos</title>
+    <style>
+        .profile-section {
+            padding: 30px 0;
+            background-color: #f8f9fa;
+        }
+        .profile-header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            margin-right: 20px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #343a40;
+            color: white;
+            border-color: #343a40;
+        }
+        .nav-tabs .nav-link {
+            color: #343a40;
+        }
+        .record-card {
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        .record-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6c757d;
+        }
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    
+    <div id="contenido">
+        <!--inicia la barra de navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-main sticky-top" id="menu">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo negrito.PNG" alt="Logotipo BodyRun Tu meta en segundos" width="150" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#inicio" aria-controls="inicio" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="inicio">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span class="icon-home"></span>Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="icon-users"></span>¿Quienes somos?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicios"> 
+                            <li><a class="dropdown-item" href="#"><span class="icon-chart-bar"></span> Indice de masa corporal</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-up-bold"></span> Superavit calorico</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-down-fat"></span> Deficit calorico</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-balance-scale"></span> Mantener peso</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-food"></span> Dietas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="icon-envelope-open"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="opciones" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Opciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="opciones"> 
+                            <li><a class="dropdown-item" href="login.html" data-login="true" id="loginItem"><span class="icon-user"></span> Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="perfil.html" id="userProfileItem"><span class="icon-user"></span> Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="#" id="logoutButton"><span class="icon-logout"></span> Cerrar sesión</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-help"></span> Acerca de</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="icon-cog-alt"></span> Configuración</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--termina la barra de navegacion-->
+
+        <!-- Contenido del perfil -->
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-header d-flex align-items-center">
+                    <div class="profile-avatar" id="profileAvatar">U</div>
+                    <div>
+                        <h2 id="profileName">Nombre de Usuario</h2>
+                        <p id="profileEmail">usuario@ejemplo.com</p>
+                    </div>
+                </div>
+
+                <!-- Pestañas de navegación -->
+                <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="historial-tab" data-toggle="tab" href="#historial" role="tab" aria-controls="historial" aria-selected="true">
+                            <span class="icon-chart-bar"></span> Historial de Registros
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="cuenta-tab" data-toggle="tab" href="#cuenta" role="tab" aria-controls="cuenta" aria-selected="false">
+                            <span class="icon-user"></span> Información de Cuenta
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="preferencias-tab" data-toggle="tab" href="#preferencias" role="tab" aria-controls="preferencias" aria-selected="false">
+                            <span class="icon-cog-alt"></span> Preferencias
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Contenido de las pestañas -->
+                <div class="tab-content bg-white p-4 border border-top-0 rounded-bottom" id="profileTabsContent">
+                    <!-- Historial de Registros -->
+                    <div class="tab-pane fade show active" id="historial" role="tabpanel" aria-labelledby="historial-tab">
+                        <h3>Tu historial de registros</h3>
+                        
+                        <!-- Filtros -->
+                        <div class="form-group mb-4">
+                            <label for="recordTypeFilter">Filtrar por tipo:</label>
+                            <select class="form-control" id="recordTypeFilter">
+                                <option value="all">Todos los registros</option>
+                                <option value="imc">Índice de Masa Corporal</option>
+                                <option value="superavit">Superávit Calórico</option>
+                                <option value="deficit">Déficit Calórico</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Contenedor para los registros -->
+                        <div id="recordsContainer">
+                            <!-- Los registros se cargarán dinámicamente aquí -->
+                            <div class="empty-state" id="emptyState">
+                                <i class="icon-chart-bar"></i>
+                                <h4>No hay registros disponibles</h4>
+                                <p>Aún no has guardado ningún cálculo. Utiliza las calculadoras de IMC, superávit o déficit calórico para comenzar a registrar tu progreso.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Información de Cuenta -->
+                    <div class="tab-pane fade" id="cuenta" role="tabpanel" aria-labelledby="cuenta-tab">
+                        <h3>Información de tu cuenta</h3>
+                        <form id="profileForm">
+                            <div class="form-group">
+                                <label for="profileUsername">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="profileUsername" readonly>
+                                <small class="form-text text-muted">El nombre de usuario no se puede cambiar.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileEmailInput">Correo electrónico</label>
+                                <input type="email" class="form-control" id="profileEmailInput" readonly>
+                                <small class="form-text text-muted">El correo electrónico no se puede cambiar.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profileNombre">Nombre completo</label>
+                                <input type="text" class="form-control" id="profileNombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePassword">Nueva contraseña</label>
+                                <input type="password" class="form-control" id="profilePassword">
+                                <small class="form-text text-muted">Deja en blanco si no deseas cambiar tu contraseña.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="profilePasswordConfirm">Confirmar nueva contraseña</label>
+                                <input type="password" class="form-control" id="profilePasswordConfirm">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            <div class="alert mt-3" id="profileUpdateMessage" style="display: none;"></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Preferencias -->
+                    <div class="tab-pane fade" id="preferencias" role="tabpanel" aria-labelledby="preferencias-tab">
+                        <h3>Preferencias de la aplicación</h3>
+                        <form id="preferencesForm">
+                            <div class="form-group">
+                                <label for="unitPreference">Unidades de medida</label>
+                                <select class="form-control" id="unitPreference">
+                                    <option value="metric">Métrico (kg, cm)</option>
+                                    <option value="imperial">Imperial (lb, in)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Notificaciones</label>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="emailNotifications">
+                                    <label class="custom-control-label" for="emailNotifications">Recibir notificaciones por correo electrónico</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar preferencias</button>
+                            <div class="alert mt-3" id="preferencesUpdateMessage" style="display: none;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>BodyRun - Tu meta en segundos</h5>
+                        <p>Tu asistente para una vida saludable</p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p>&copy; 2023 BodyRun. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/perfil.js"></script>
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('contenido').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
