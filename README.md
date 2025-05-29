@@ -127,5 +127,5 @@ Para más información o consultas sobre el proyecto, por favor contacta a trav�
 ---
 
 <p align="center">
-  © 2023 BodyRun - Tu meta en segundos. Todos los derechos reservados.
+  © 2025 BodyRun - Tu meta en segundos. Todos los derechos reservados.
 </p>
