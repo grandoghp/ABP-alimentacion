@@ -43,7 +43,7 @@ BodyRun es una aplicación web dedicada al bienestar y la nutrición, ofreciendo
   - HTML5 - Estructura semántica
   - CSS3 (Bootstrap Framework) - Diseño responsivo
   - JavaScript (jQuery) - Interactividad y cálculos
-- **Almacenamiento**:
+- **Backend**:
   - IndexedDB - Base de datos local en el navegador
   - LocalStorage - Gestión de sesiones de usuario
 - **Recursos**:
