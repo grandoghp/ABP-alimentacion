@@ -88,7 +88,7 @@ El proyecto incluye documentación detallada para facilitar su uso y mantenimien
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/bodyrun.git
+   git clone https:/grandoghp/github.com//ABP-alimentacion.git
    ```
 
 2. Abre `index.html` en tu navegador web
