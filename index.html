@@ -971,7 +971,44 @@
                 </div>
             </div>
         </div>
-        
+        <div>
+            <p>
+                <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+                <div id="n8n-chat"></div>
+                
+                <script type="module">
+                  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+                
+                  createChat({
+                    webhookUrl: 'http://localhost:5678/webhook/a889d2ae-2159-402f-b326-5f61e90f602e/chat',
+                    target: '#n8n-chat',
+                    mode: 'window',
+                    defaultLanguage: 'es',
+                    initialMessages: [
+                      'Hola! 👋',
+                      'Soy BodyRun, tu asistente virtual. ¿En qué puedo ayudarte hoy?'
+                    ],
+                    i18n: {
+                      es: {
+                        title: 'Soy BodyRun 🤖',
+                        subtitle: 'Inicia un chat. Estamos aquí para ayudarte 24/7.',
+                        footer: '',
+                        getStarted: 'Nueva Conversación',
+                        inputPlaceholder: 'Escribe tu mensaje aquí...',
+                      }
+                    },
+                    theme: {
+                      primaryColor: '#007bff',
+                      backgroundColor: '#f8f9fa',
+                      textColor: '#212529',
+                      bubbleColor: '#007bff',
+                      bubbleTextColor: '#ffffff'
+                    }
+                  });
+                </script> 
+            </p>
+
+        </div>
         <!-- Botón para volver arriba -->
         <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">
             <i class="icon-up-open"></i>

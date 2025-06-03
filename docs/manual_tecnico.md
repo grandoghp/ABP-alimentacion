@@ -35,6 +35,11 @@ Usuario <-> Navegador Web <-> HTML/CSS/JS <-> Lógica de Cálculo <-> Base de Da
 - **JavaScript**: Lógica de cliente y manipulación del DOM
 - **jQuery 3.6.0**: Biblioteca JavaScript para simplificar operaciones DOM
 
+
+### Backend
+- **JavaScript**: Lógica de servidor y manipulación de datos
+- **IndexedDB**: Sistema de base de datos del lado del cliente para almacenamiento persistente
+
 ### Recursos
 - **Fontello**: Biblioteca de iconos personalizados
 - **Imágenes**: Formato JPG, PNG y WebP optimizados
@@ -54,11 +59,45 @@ Usuario <-> Navegador Web <-> HTML/CSS/JS <-> Lógica de Cálculo <-> Base de Da
 ├── img/                  # Recursos de imágenes
 ├── js/                   # Scripts JavaScript
 │   ├── bootstrap*.js      # Scripts de Bootstrap
+│   ├── database.js        # Gestión de IndexedDB
+│   ├── auth.js            # Autenticación de usuarios
 │   ├── food-database.js   # Base de datos de alimentos
 │   ├── main.js            # Lógica principal
 │   └── preloader.js       # Funcionalidad de precarga
 └── index.html            # Página principal
 ```
+
+## Sistema de Almacenamiento
+
+### Base de Datos del Cliente
+La aplicación utiliza IndexedDB como sistema de almacenamiento principal, implementando una arquitectura sin servidor que permite:
+- Persistencia de datos en el navegador
+- Operaciones CRUD completas en el cliente
+- Manejo de múltiples almacenes de objetos
+
+### Estructura de la Base de Datos
+
+#### Almacenes de Objetos
+1. **usuarios**
+   - Clave primaria: ID autoincremental
+   - Índices: email (único), username (único)
+   - Almacena perfiles de usuario y credenciales
+
+2. **registrosIMC**
+   - Clave primaria: ID autoincremental
+   - Índices: usuarioId, fecha
+   - Registra historial de mediciones de IMC
+
+3. **registrosCalorias**
+   - Clave primaria: ID autoincremental
+   - Índices: usuarioId, fecha, tipo
+   - Almacena planes calóricos (superávit/déficit/mantenimiento)
+
+### Características del Sistema
+- Verificación de compatibilidad del navegador
+- Manejo de errores y excepciones
+- Exportación e importación de datos en formato JSON
+- Persistencia entre sesiones del navegador
 
 ## Componentes Principales
 
