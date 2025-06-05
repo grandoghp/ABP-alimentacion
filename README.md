@@ -43,7 +43,7 @@ BodyRun es una aplicación web dedicada al bienestar y la nutrición, ofreciendo
   - HTML5 - Estructura semántica
   - CSS3 (Bootstrap Framework) - Diseño responsivo
   - JavaScript (jQuery) - Interactividad y cálculos
-- **Almacenamiento**:
+- **Backend**:
   - IndexedDB - Base de datos local en el navegador
   - LocalStorage - Gestión de sesiones de usuario
 - **Recursos**:
@@ -88,7 +88,7 @@ El proyecto incluye documentación detallada para facilitar su uso y mantenimien
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/bodyrun.git
+   git clone https:/grandoghp/github.com//ABP-alimentacion.git
    ```
 
 2. Abre `index.html` en tu navegador web
